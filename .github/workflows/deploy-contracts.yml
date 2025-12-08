@@ -25,6 +25,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: Git submodules init and update
+        run: |
+          git submodule init
+          git submodule update
       - name: Setup Node.js v16
         uses: actions/setup-node@v4
         with:
@@ -94,6 +98,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: Git submodules init and update
+        run: |
+          git submodule init
+          git submodule update
       - name: Setup Node.js v16
         uses: actions/setup-node@v4
         with:
